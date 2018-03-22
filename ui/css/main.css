@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    background-color: #DEDEDE;
 }
 
 .fill { 
@@ -13,4 +14,13 @@ html, body {
 
 .topPad{
     padding-top: 65px;
+}
+
+.card{
+    border: 1px solid #BBB;
+}
+
+a{
+    text-decoration: none;
+    color: #444;
 }

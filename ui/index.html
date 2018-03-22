@@ -5,53 +5,91 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-
-    <title>Warehouse Simulator</title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="libs/bootstrap.min.css" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="shortcut icon" pan-favicon="" href="assets/favicon.ico">
+  
+    <title>Urban Telemetry Platform</title>
 
       <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC5bsX7F3_fQC5vNEAgBhHtilbXoopiGo&callback=initMap"></script>
-
-    <script src="js/map.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/popper.min.js"  crossorigin="anonymous"></script>
+    <script src="libs/bootstrap.min.js" crossorigin="anonymous"></script>
+   
+   
 
 </head>
   <body>
 
-        <nav class="navbar fixed-top navbar-light bg-light">
-            <a class="navbar-brand " href="#">
-                <img src="/assets/cbicon.png" width="30" height="30"  class="d-inline-block align-top" alt="">
-                Warehouse Simulator
+        <nav class="navbar bg-dark">
+            <a class="navbar-brand " href="#" style="color: #EEE; font-weight: 400">
+                <img src="/assets/uta_logo.png" width="30" height="30"  class="d-inline-block align-top" alt=""  style="margin-right: 10px;">
+                Urban Telemetry Platform
             </a>
         </nav>
         
-        <div class="container-fluid fill">
+        <div class="container-fluid fill" style="margin-top: 80px">
+              
+          
+          <div class="row">
+            <div class="col-sm-1 ml-md-auto">
+              
+                <a class="card" href="https://console.cloud.google.com/home/dashboard?project=utp-md&hl=en" style="width: 18rem;" target="_blank">
+                    <img class="card-img-top" src="assets/cockpit.png" style="border-bottom: 1px solid #BBB">
+                    <div class="card-body">
+                      <h5 class="card-title">GCP Cockpit</h5>
+                      <p class="card-text">Explore the current status of the platform and configure the details.</p>
+                      
+                    </div>
+                  </a>
+
+            </div>
+
+            <div class="col-sm-1 ml-md-auto">
+              
+                <a class="card" href="https://ui-businesscockpit-dot-utp-md.appspot.com/" style="width: 18rem;"  target="_blank">
+                    <img class="card-img-top" src="assets/livemap.png" style="border-bottom: 1px solid #BBB">
+                    <div class="card-body">
+                      <h5 class="card-title">Traffic Cockpit</h5>
+                      <p class="card-text">Monitor the latest traffic situation in Chicago.</p>
+                      
+                    </div>
+                  </a>
+
+            </div>
+
+            <div class="col-sm-1  ml-md-auto">
+              
+                <a class="card" href="https://datastudio.google.com/navigation/reporting?hl=en" style="width: 18rem;"  target="_blank">
+                    <img class="card-img-top" src="assets/datastudio.png" style="border-bottom: 1px solid #BBB">
+                    <div class="card-body">
+                      <h5 class="card-title">Data Studio</h5>
+                      <p class="card-text">Explore and analyze the real-time congestion data.</p>
+                      
+                    </div>
+                  </a>
+
+            </div>
+            
+            <div class="col-sm-3  ml-md-auto">
+              
+                <a class="card" href="https://ui-calculator-dot-utp-md.appspot.com/" style="width: 18rem;"  target="_blank">
+                    <img class="card-img-top" src="assets/calculator.png" style="border-bottom: 1px solid #BBB">
+                    <div class="card-body">
+                      <h5 class="card-title">Scenario Calculator</h5>
+                      <p class="card-text">Enter the relevant factors to determin your final price.</p>
+                      
+                    </div>
+                  </a>
+
+            </div>
+
+          </div>
+
                
-                <div class="row fill">
-                  <div class="col-4 topPad" style="background-color:#FFF">
-                    <ul class="nav nav-tabs ">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Warehouses</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Layout Generator</a>
-                        </li>
-                        <li class="nav-item">
-                                <a class="nav-link" href="#">Custom Tiles</a>
-                        </li>
-                        
-                    </ul>
-                  </div>
-                  <div class="col-8 noPad">
-                    <div id="map" class="fill"></div>
-                  </div>                 
-                </div>
-              </div>
+        </div>
 
 
 
